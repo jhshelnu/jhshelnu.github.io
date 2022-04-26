@@ -1,15 +1,17 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { GitHub, LinkedIn, Email, InsertDriveFile } from "@mui/icons-material";
+import './Header.css';
 
 
 function Header() {
     return (
         <div>
             <Container>
-                <Box sx={{ marginTop: '40px' }}>
+                <Box sx={{ marginTop: '40px', marginBottom: '20px' }}>
                     <Typography 
                         variant="h5"
                         align="center"
+                        className="disable-select"
                     >
                         Harrison Shelnutt
                     </Typography>
