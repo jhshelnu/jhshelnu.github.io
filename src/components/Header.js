@@ -7,7 +7,10 @@ function Header() {
         <div>
             <Container>
                 <Box sx={{ marginTop: '40px' }}>
-                    <Typography variant="h5" align="center">
+                    <Typography 
+                        variant="h5"
+                        align="center"
+                    >
                         Harrison Shelnutt
                     </Typography>
                     <Box

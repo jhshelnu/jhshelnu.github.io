@@ -1,7 +1,8 @@
 import { CssBaseline } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import Header from './components/Header';
+import ThreeScene from './components/ThreeScene';
 import theme from './theme';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
+      <ThreeScene />
     </ThemeProvider>
   );
 }
