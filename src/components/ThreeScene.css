@@ -1,0 +1,7 @@
+.webgl {
+    /* position: absolute !important; */
+    width: 100vw !important;
+    left: 0;
+    /* Dynamically resize canvas so its height is always the full window height minus the header's height */
+    height: calc(100vh - 40px - 20px - 68.516px) !important;
+}
