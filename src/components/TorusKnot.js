@@ -1,13 +1,11 @@
-import { useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { useFrame } from "react-three-fiber";
-
-const colors = ['purple', 'blue', 'forestgreen', 'orangered'];
+import ColorContext from "../contexts/ColorContext";
 
 function TorusKnot(props) {
     const mesh = useRef();
-
-    const [colorIndex, setColorIndex] = useState(0);
-
+    const color = useContext(ColorContext);
+    
     useFrame(({ clock }) => {
         // using the clock ensures the same perceived speed across devices despite frame rate differences
         const t = clock.getElapsedTime();
@@ -19,12 +17,11 @@ function TorusKnot(props) {
         <mesh
             {...props}
             ref={mesh}
-            onPointerDown={() => setColorIndex((colorIndex + 1) % colors.length)}
         >
             <torusKnotBufferGeometry
                 args={[10, 2.7, 300, 30, 2, 3]} />
             <meshStandardMaterial 
-                color={colors[colorIndex]}
+                color={color}
                 metalness={0.25}
                 emissiveIntensity={0} />
         </mesh>
